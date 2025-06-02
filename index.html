@@ -56,18 +56,13 @@
       50% { opacity: 0; }
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
+    header h1, header p, header a, .container, .footer {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
     }
 
-    header p, header a {
-      font-size: 1rem;
-      color: var(--subtext);
-      text-decoration: none;
-      display: inline-block;
-      margin: 0.25rem 0.5rem;
+    header h1.show, header p.show, header a.show, .container.show, .footer.show {
+      opacity: 1;
     }
 
     .container {
@@ -134,12 +129,74 @@
   <header>
     <div id="typewriter"></div><span id="cursor"></span>
     <h1>>_ Austin Moore</h1>
-    <p>Systems, Network, & Security Professional | Ottawa, ON</p>
+    <p>Network & Security Technician | Ottawa, ON</p>
     <p><a href="mailto:austinmoore3997@gmail.com">austinmoore3997@gmail.com</a> | <a href="https://linkedin.com/in/4u571n-m00r3" target="_blank">linkedin.com/in/4u571n-m00r3</a></p>
   </header>
 
   <div class="container">
-    <!-- CONTENT OMITTED FOR BREVITY (unchanged content remains here) -->
+    <section>
+      <h2>Featured Projects</h2>
+
+      <div class="project-card">
+        <h3>Private Cloud Infrastructure Design and Build (2025)</h3>
+        <p><strong>Summary:</strong> Designed and deployed a private VMware-based infrastructure simulating a mid-size enterprise network.</p>
+        <p><strong>Tech Stack:</strong> VMware vSphere/VCenter, Windows Server, Linux, AD, NAS, SSH</p>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Used Jump Box for secure access</li>
+          <li>Documented full setup with Gantt charts</li>
+          <li>Included centralized file sharing and identity services</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Deploying Isolated Virtual Machines (2025)</h3>
+        <p><strong>Summary:</strong> Created secure virtual environments using VLANs and ACLs to isolate network traffic.</p>
+        <p><strong>Tech Stack:</strong> Windows/Linux VMs, Ubiquiti enterprise gear, VLANs, ACLs</p>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Enabled safe internet access while blocking lateral movement</li>
+          <li>Built for 3rd-party contractor environments</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>RedHat Local LLM Deployment (2025)</h3>
+        <p><strong>Summary:</strong> Configured an offline chatbot using Mistral 7B on RHEL9 with a CLI interface for air-gapped use cases.</p>
+        <p><strong>Tech Stack:</strong> RHEL9, Mistral 7B, Terminal Interface</p>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Lightweight deployment in offline environments</li>
+          <li>Minimal dependencies and resource overhead</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>About Me</h2>
+      <p>I am a Computer Systems Technician student with experience in cloud infrastructure, cybersecurity, and government application architecture. I build scalable network environments and design secure systems aligned with real-world enterprise needs.</p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Scripting:</strong> Python, PowerShell, Bash</li>
+        <li><strong>OS:</strong> Windows Server, RedHat, Ubuntu, Kali, Parrot OS</li>
+        <li><strong>Platforms:</strong> AD, VMware vSphere, Azure, ArchiMate, SharePoint</li>
+        <li><strong>Networking:</strong> TCP/IP, VLANs, Cisco IOS, Wireshark</li>
+        <li><strong>Cybersecurity:</strong> OWASP, Ethical Hacking, Nmap</li>
+        <li><strong>Infrastructure:</strong> Virtualization, Open-Source Technologies, System Design</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>RedHat Systems Administration I & II</li>
+        <li>IBM Cybersecurity Analyst – Coursera</li>
+        <li>Codecademy: Cybersecurity Fundamentals, Ethical Hacking, Nmap, Learn to Code</li>
+      </ul>
+    </section>
   </div>
 
   <div class="footer">
@@ -170,6 +227,10 @@
           charIndex = 0;
           setTimeout(typeWriter, 600);
         }
+      } else {
+        // Reveal rest of page after typing animation
+        document.querySelectorAll('header h1, header p, header a, .container, .footer')
+          .forEach(el => el.classList.add('show'));
       }
     }
 
