@@ -213,7 +213,7 @@
 
     let lineIndex = 0;
     let charIndex = 0;
-    const speed = 5;
+    const speed = 25;
     const target = document.getElementById("typewriter");
 
     function typeWriter() {
@@ -226,7 +226,7 @@
           target.innerHTML += '<br>';
           lineIndex++;
           charIndex = 0;
-          setTimeout(typeWriter, 100);
+          setTimeout(typeWriter, 200);
         }
       } else {
         // Reveal rest of page after typing animation
