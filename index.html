@@ -1,129 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Austin Moore | Projects & Resume</title>
-  <style>
-    :root {
-      --bg-color: #0d1117;
-      --accent: #58a6ff;
-      --primary: #161b22;
-      --border: #30363d;
-      --text: #c9d1d9;
-      --subtext: #8b949e;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Fira Code', 'Courier New', monospace;
-      background-color: var(--bg-color);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: var(--primary);
-      text-align: center;
-      padding: 3rem 1rem;
-      border-bottom: 2px solid var(--border);
-      position: relative;
-    }
-
-    #typewriter {
-      color: var(--accent);
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      min-height: 1.6rem;
-    }
-
-    #cursor {
-      display: inline-block;
-      background-color: var(--accent);
-      width: 0.6ch;
-      height: 1.2em;
-      margin-left: 2px;
-      animation: blink 1s step-start infinite;
-      vertical-align: bottom;
-    }
-
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-
-    header h1, header p, header a, .container, .footer {
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    header h1.show, header p.show, header a.show, .container.show, .footer.show {
-      opacity: 1;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      color: var(--accent);
-      margin-bottom: 1rem;
-      border-left: 5px solid var(--accent);
-      padding-left: 1rem;
-    }
-
-    .project-card {
-      background: linear-gradient(145deg, #161b22, #0f141a);
-      padding: 1.5rem;
-      border: 1px solid var(--border);
-      border-radius: 0.75rem;
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 10px #58a6ff55;
-    }
-
-    .project-card h3 {
-      font-size: 1.25rem;
-      color: #79c0ff;
-      margin-bottom: 0.5rem;
-    }
-
-    .project-card p {
-      margin: 0.25rem 0;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-      list-style-type: square;
-    }
-
-    ul li {
-      margin-bottom: 0.4rem;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.85rem;
-      color: #6e7681;
-      border-top: 1px solid var(--border);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -133,71 +14,73 @@
   </header>
 
   <div class="container">
-     <section>
+    <section>
       <h2>About Me</h2>
-      <p>I am a Computer Systems & Networking Technician student with experience in network infrastructure, cybersecurity, and system/application architecture. I can build and configure scalable network environments and design secure systems aligned with real-world enterprise needs.</p>
+      <p>
+        I am a Computer Systems & Networking Technician student with experience in network infrastructure,
+        cybersecurity, and system/application architecture. I can build and configure scalable network environments
+        and design secure systems aligned with real-world enterprise needs.
+      </p>
     </section>
-    
+
     <section>
       <h2>Featured Projects</h2>
-      
-    <a href="private-cloud.html" style="text-decoration: none; color: inherit;">
-      <div class="project-card">
-        <h3>Private Cloud Infrastructure Design and Build (2025)</h3>
-        <p><strong>Summary:</strong> Designed and deployed a private VMware-based infrastructure simulating a mid-size enterprise network.</p>
-        <p><strong>Tech:</strong> VMware vSphere/VCenter, Windows Server, Linux, AD, NAS, SSH</p>
-        <p><strong>Highlights:</strong></p>
-        <ul>
-          <li>Used Jump Box for secure access</li>
-          <li>Documented full setup with Gantt charts</li>
-          <li>Included centralized file sharing and identity services</li>
-        </ul>
-      </div>
-    </a>
 
-    <a href="isolated-vms.html" style="text-decoration: none; color: inherit;">
-      <div class="project-card">
-        <h3>Deploying Isolated Virtual Machines (2025)</h3>
-        <p><strong>Summary:</strong> Created secure virtual environments using VLANs and ACLs to isolate network traffic.</p>
-        <p><strong>Tech:</strong> Windows/Linux VMs, Ubiquiti enterprise gear, VLANs, ACLs</p>
-        <p><strong>Highlights:</strong></p>
-        <ul>
-          <li>Enabled safe internet access while blocking lateral movement</li>
-          <li>Built for 3rd-party contractor environments</li>
-        </ul>
-      </div>
-    </a>
-      
-    <a href="llm-deployment.html" style="text-decoration: none; color: inherit;">
-      <div class="project-card">
-        <h3>RedHat Local LLM Deployment (2025)</h3>
-        <p><strong>Summary:</strong> Configured an offline chatbot using Mistral 7B on RHEL9 with a CLI interface for on-prem use cases.</p>
-        <p><strong>Tech:</strong> RHEL9, Mistral 7B, Terminal Interface, VMware</p>
-        <p><strong>Highlights:</strong></p>
-        <ul>
-          <li>Lightweight deployment in offline environments</li>
-          <li>Minimal dependencies and resource overhead</li>
-          <li>Olama with Mistral.ai, basical language skills but no real data scraping or mapping </li>
-        </ul>
-      </div>
-    </a>
+      <a href="private-cloud.html" style="text-decoration: none; color: inherit;">
+        <div class="project-card">
+          <h3>Private Cloud Infrastructure Design and Build (2025)</h3>
+          <p><strong>Summary:</strong> Designed and deployed a private VMware-based infrastructure simulating a mid-size enterprise network.</p>
+          <p><strong>Tech:</strong> VMware vSphere/VCenter, Windows Server, Linux, AD, NAS, SSH</p>
+          <p><strong>Highlights:</strong></p>
+          <ul>
+            <li>Used Jump Box for secure access</li>
+            <li>Documented full setup with Gantt charts</li>
+            <li>Included centralized file sharing and identity services</li>
+          </ul>
+        </div>
+      </a>
 
-    <a href="media-server.html" style="text-decoration: none; color: inherit;">
-      <div class="project-card">
-        <h3>Media Server Configuration and Deployment (2024)</h3>
-        <p><strong>Summary:</strong> Configured and deployed a JellyFin Media Server over LAN for Home Theatre.</p>
-        <p><strong>Tech:</strong> Package managers, Linux, VPN, SSH, RDP, OBS Studio, Authentication.</p>
-        <p><strong>Highlights:</strong></p>
-        <ul>
-          <li>Used VPN for secure access</li>
-          <li>System administration for file system Configs and user management</li>
-          <li>Configured LDAP for user authentication method</li>
-        </ul>
-      </div>
-    </a>
+      <a href="isolated-vms.html" style="text-decoration: none; color: inherit;">
+        <div class="project-card">
+          <h3>Deploying Isolated Virtual Machines (2025)</h3>
+          <p><strong>Summary:</strong> Created secure virtual environments using VLANs and ACLs to isolate network traffic.</p>
+          <p><strong>Tech:</strong> Windows/Linux VMs, Ubiquiti enterprise gear, VLANs, ACLs</p>
+          <p><strong>Highlights:</strong></p>
+          <ul>
+            <li>Enabled safe internet access while blocking lateral movement</li>
+            <li>Built for 3rd-party contractor environments</li>
+          </ul>
+        </div>
+      </a>
+
+      <a href="llm-deployment.html" style="text-decoration: none; color: inherit;">
+        <div class="project-card">
+          <h3>RedHat Local LLM Deployment (2025)</h3>
+          <p><strong>Summary:</strong> Configured an offline chatbot using Mistral 7B on RHEL9 with a CLI interface for on-prem use cases.</p>
+          <p><strong>Tech:</strong> RHEL9, Mistral 7B, Terminal Interface, VMware</p>
+          <p><strong>Highlights:</strong></p>
+          <ul>
+            <li>Lightweight deployment in offline environments</li>
+            <li>Minimal dependencies and resource overhead</li>
+            <li>Olama with Mistral.ai, basic language skills but no real data scraping or mapping</li>
+          </ul>
+        </div>
+      </a>
+
+      <a href="media-server.html" style="text-decoration: none; color: inherit;">
+        <div class="project-card">
+          <h3>Media Server Configuration and Deployment (2024)</h3>
+          <p><strong>Summary:</strong> Configured and deployed a JellyFin Media Server over LAN for Home Theatre.</p>
+          <p><strong>Tech:</strong> Package managers, Linux, VPN, SSH, RDP, OBS Studio, Authentication.</p>
+          <p><strong>Highlights:</strong></p>
+          <ul>
+            <li>Used VPN for secure access</li>
+            <li>System administration for file system configs and user management</li>
+            <li>Configured LDAP for user authentication method</li>
+          </ul>
+        </div>
+      </a>
     </section>
-
-    
   </div>
 
   <div class="footer">
@@ -229,7 +112,6 @@
           setTimeout(typeWriter, 200);
         }
       } else {
-        // Reveal rest of page after typing animation
         document.querySelectorAll('header h1, header p, header a, .container, .footer')
           .forEach(el => el.classList.add('show'));
       }
